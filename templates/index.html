@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Vision - Birds Classification</title>
+    <style>
+        .center {
+  margin: auto;
+  width: 25%;
+  border: 3px solid green;
+  padding: 5px;
+}
+    </style>
+</head>
+<body>
+<div style="text-align:center">
+<h1>TIPP-AAI-Assignment</h1><br/>
+    <h3>Applied AI Solutions Development – Computer Vision</h3>
+</div>
+<div class="center">
+
+<form id="birds_form" action="/" method="POST" enctype = "multipart/form-data">
+    <input type="file" id="file-selector" name="file" accept=".jpg" multiple>
+    <p id="status"></p><br/>
+    <input type="submit" id="btnsubmit">
+</form>
+<br/>
+    <p>Actual:{{mybird}}</p>
+<img src="{{ url_for('static', filename=mybird) }}" alt="Birds Image Placeholder" align="middle" height="150" width="150">
+    <div id="results">
+        <b>Predicted:</b>
+         <p style="font-size:12px">{{ result }}</p>
+    </div>
+</div>
+</body>
+</html>
